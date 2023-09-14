@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sampleproject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <%=render 'home/header'%>
+    <br>
+    <div class="container">
+      <%if notice%>
+        <%= render 'layouts/alerts'%>
+      <%end%>
+      
+      <%= yield %>
+    </div>
+  </body>
+</html>

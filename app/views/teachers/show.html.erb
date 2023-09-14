@@ -1,0 +1,7 @@
+<div class="jumbotron">
+  <h1 class="display-4 mt-5 mb-5"><%= @teacher.name %></h1>
+  <h3 class="lead"><span class="bi bi-envelope" style="color:red;"></span> <%= @teacher.email %>     |    age- <%= @teacher.age %></h3>
+  <hr class="my-4">
+  <%= link_to "Edit", edit_teacher_path(@teacher) , class:'btn btn-secondary'%>
+  <%= link_to "Back", teachers_path ,class:"btn btn-outline-primary"%>
+</div>
